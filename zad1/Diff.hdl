@@ -3,20 +3,37 @@ CHIP Diff{
     OUT out[16];
 
     PARTS:
-    Xor(a=a[0], b=b[0], out=out[0]);
-    Xor(a=a[1], b=b[1], out=out[1]);
-    Xor(a=a[2], b=b[2], out=out[2]);
-    Xor(a=a[3], b=b[3], out=out[3]);
-    Xor(a=a[4], b=b[4], out=out[4]);
-    Xor(a=a[5], b=b[5], out=out[5]);
-    Xor(a=a[6], b=b[6], out=out[6]);
-    Xor(a=a[7], b=b[7], out=out[7]);
-    Xor(a=a[8], b=b[8], out=out[8]);
-    Xor(a=a[9], b=b[9], out=out[9]);
-    Xor(a=a[10], b=b[10], out=out[10]);
-    Xor(a=a[11], b=b[11], out=out[11]);
-    Xor(a=a[12], b=b[12], out=out[12]);
-    Xor(a=a[13], b=b[13], out=out[13]);
-    Xor(a=a[14], b=b[14], out=out[14]);
-    Xor(a=a[15], b=b[15], out=out[15]);
+    Xor(a=a[0], b=b[0], out=x0);
+    Xor(a=a[1], b=b[1], out=x1);
+    Xor(a=a[2], b=b[2], out=x2);
+    Xor(a=a[3], b=b[3], out=x3);
+    Xor(a=a[4], b=b[4], out=x4);
+    Xor(a=a[5], b=b[5], out=x5);
+    Xor(a=a[6], b=b[6], out=x6);
+    Xor(a=a[7], b=b[7], out=x7);
+    Xor(a=a[8], b=b[8], out=x8);
+    Xor(a=a[9], b=b[9], out=x9);
+    Xor(a=a[10], b=b[10], out=x10);
+    Xor(a=a[11], b=b[11], out=x11);
+    Xor(a=a[12], b=b[12], out=x12);
+    Xor(a=a[13], b=b[13], out=x13);
+    Xor(a=a[14], b=b[14], out=x14);
+    Xor(a=a[15], b=b[15], out=x15);
+	
+	Add16(a[0]=x0, b[0]= false, out=out0);
+	Add16(a[0]=x1, b =out0, out=out1);
+	Add16(a[0]=x2, b =out1, out=out2);
+	Add16(a[0]=x2, b = out2, out=out3);
+	Add16(a[0]=x4, b = out3, out=out4);
+	Add16(a[0]=x5, b = out4, out=out5);
+	Add16(a[0]=x6, b = out5, out=out6);
+	Add16(a[0]=x7, b = out6, out=out7);
+	Add16(a[0]=x8, b = out7, out=out8);
+	Add16(a[0]=x9, b = out8, out=out9);
+	Add16(a[0]=x10, b = out9, out=out10);
+	Add16(a[0]=x11, b = out10, out=out11);
+	Add16(a[0]=x12, b = out11, out=out12);
+	Add16(a[0]=x13, b = out12, out=out13);
+	Add16(a[0]=x14, b = out13, out=out14);
+	Add16(a[0]=x15, b = out14, out=out);
 }
