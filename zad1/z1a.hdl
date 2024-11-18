@@ -1,0 +1,11 @@
+CHIP z1a {
+	IN x,y;
+	OUT out;
+	
+	PARTS:
+	Not(in = x, out = nx);
+	Not(in = y, out = ny);
+	
+	Or (a =nx, b = ny, out = out);
+
+}

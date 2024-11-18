@@ -1,0 +1,15 @@
+Require Import Bool.
+Goal forall x y : bool,
+(negb y || negb x)=((x && negb y)||(negb x && negb y)||(negb x && y)). 
+Proof.
+intros x y.
+destruct x, y; simpl; reflexivity.
+Qed.
+
+
+Goal forall x y z : bool, 
+  x && negb y && z = negb(negb x && y && z) && negb(x && y && negb z) && (x && negb y && z).
+Proof.
+  intros.
+  destruct x, y, z; simpl; reflexivity.
+Qed.
