@@ -1,0 +1,33 @@
+push constant 19
+push constant 25
+push constant 13
+call min 3
+function min 0
+push argument 0
+push argument 1
+lt
+if-goto cf
+goto cs
+label cf
+push argument 0
+push argument 2
+lt
+if-goto f
+goto t
+label cs
+push argument 1
+push argument 2
+lt
+if-goto s
+goto t
+label f
+push argument 0
+goto e
+label s
+push argument 1
+goto e
+label t
+push argument 2
+goto e
+label e
+return

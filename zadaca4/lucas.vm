@@ -1,0 +1,51 @@
+push constant 7
+call lucas 1
+function lucas 3
+push argument 0
+push constant 0
+eq
+if-goto zr
+push argument 0
+push constant 1
+eq
+if-goto on
+
+push argument 0
+push constant 2
+sub
+pop argument 0
+push constant 2
+pop local 1
+push constant 1
+pop local 2
+
+label ls
+push local 0
+push argument 0
+eq
+if-goto le
+
+push local 2
+push local 2
+push local 1
+add
+pop local 2
+pop local 1
+push local 0
+push constant 1
+add
+pop local 0
+goto ls
+
+label le
+push local 2
+goto end
+label zr
+push constant 2
+goto end
+
+label on
+push constant 1
+goto end
+label end
+return
